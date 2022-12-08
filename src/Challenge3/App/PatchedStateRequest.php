@@ -2,16 +2,10 @@
 
 namespace Interview\Challenge3\App;
 
-use Interview\Challenge3\Vendor\StateRequest;
-use Interview\Challenge3\Vendor\StateRequestInterface;
-use Interview\Misc\IoC;
+use Interview\Challenge3\Vendor\{StateRequest, StateRequestInterface};
 
 class PatchedStateRequest extends StateRequest {
-	private AvailableStateRepositoryInterface $availableStateRepository;
-
-	public function __construct() {
-		$this->availableStateRepository = IoC::get(AvailableStateRepositoryInterface::class);
-	}
+	public function __construct(private ?AvailableStateRepositoryInterface $availableStateRepository = null) { }
 
     public function createFromGET(): StateRequestInterface
     {
