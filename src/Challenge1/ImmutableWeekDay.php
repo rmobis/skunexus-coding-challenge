@@ -37,7 +37,7 @@ class ImmutableWeekDay
      */
     public function __construct(int $value) {
         if ($value < static::SUNDAY || $value > static::SATURDAY) {
-            throw new \OutOfRangeException('Provided value is not a valid week day.');
+            throw new \OutOfRangeException("Passed value `$value` is not a valid week day.");
         }
 
         $this->value = $value;
@@ -45,7 +45,8 @@ class ImmutableWeekDay
 
     public function addDays(int $value): ImmutableWeekDay
     {
-        return new self(($this->value + $value) % 7);
+        $newValue = ($this->value + $value) % 7;
+        return new self($newValue);
     }
 
     public function equals(ImmutableWeekDay $day): bool
