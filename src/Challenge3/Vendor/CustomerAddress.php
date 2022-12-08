@@ -2,10 +2,6 @@
 
 namespace Interview\Challenge3\Vendor;
 
-use DomainException;
-use Interview\Challenge3\App\AvailableStateRepositoryInterface;
-use Interview\Misc\IoC;
-
 class CustomerAddress
 {
     private AddressRepositoryInterface $addressRepository;
