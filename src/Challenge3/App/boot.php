@@ -1,7 +1,7 @@
 <?php
 
 use Interview\Misc\IoC;
-use Interview\Challenge3\App\{PatchedStateRequest, OtherPatchedStateRequest};
+use Interview\Challenge3\App\PatchedStateRequest;
 use Interview\Challenge3\Vendor\StateRequestFactoryInterface;
 
 /*
@@ -16,12 +16,7 @@ use Interview\Challenge3\Vendor\StateRequestFactoryInterface;
  * a list of available states. Otherwise, you have to throw \DomainException.
  */
 
-// IoC::set(
-// 	StateRequestFactoryInterface::class,
-// 	PatchedStateRequest::class
-// );
-
 IoC::set(
 	StateRequestFactoryInterface::class,
-	OtherPatchedStateRequest::class
+	PatchedStateRequest::class
 );
