@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/6.3/phpunit.xsd"
+         bootstrap="vendor/autoload.php"
+         colors="true"
+         verbose="true">
+
+    <testsuites>
+        <testsuite name="Challenge1">
+            <file>tests/Challenge1Test.php</file>
+        </testsuite>
+        <testsuite name="Challenge2">
+            <file>tests/Challenge2Test.php</file>
+        </testsuite>
+        <testsuite name="Challenge3">
+            <file>tests/Challenge3Test.php</file>
+        </testsuite>
+    </testsuites>
+</phpunit>
