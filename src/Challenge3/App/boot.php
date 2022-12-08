@@ -1,6 +1,9 @@
 <?php
 
 use Interview\Misc\IoC;
+use Interview\Challenge3\App\PatchedStateRequest;
+use Interview\Challenge3\Vendor\StateRequestInterface;
+use Interview\Challenge3\Vendor\StateRequestFactoryInterface;
 
 /*
  * In our app, we installed vendor package which unfortunately has one hardcoded dependency.
@@ -14,7 +17,7 @@ use Interview\Misc\IoC;
  * a list of available states. Otherwise, you have to throw \DomainException.
  */
 
-//IoC::set(
-// interface,
-// implementation
-//);
+IoC::set(
+	StateRequestFactoryInterface::class,
+	PatchedStateRequest::class
+);
